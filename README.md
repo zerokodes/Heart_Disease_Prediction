@@ -20,7 +20,7 @@ This project involves building a machine learning model to predict the presence 
 
 - Preprocessed and cleaned heart disease dataset.
 - Exploratory Data Analysis (EDA) to understand the dataset.
-- Implementation of multiple machine learning models.
+- Implementation of multiple machine learning models (For this release I used Logistic Regression / Binary Classificattion).
 - Model evaluation and hyperparameter tuning.
 - Dockerized setup for consistent development and deployment.
 
@@ -30,7 +30,7 @@ This project involves building a machine learning model to predict the presence 
 
 The dataset used for this project is sourced from Kaggle. It contains information about various medical attributes such as age, sex, cholesterol levels, and more, which are used to predict the presence of heart disease.
 
-**[Dataset Link](https://www.kaggle.com/)** (Add the specific link to the dataset here)
+**[Dataset Link](https://www.kaggle.com/datasets/kapoorprakhar/cardio-health-risk-assessment-dataset)**
 
 ---
 
@@ -49,7 +49,7 @@ To get a local copy up and running, follow these steps:
 
 ### Prerequisites
 - Install [Docker](https://www.docker.com/get-started)
-- Download the dataset from Kaggle and place it in the `data/` folder.
+- Download the dataset from Kaggle and place it in the `data/` folder(Optional).
 
 ---
 
@@ -57,12 +57,12 @@ To get a local copy up and running, follow these steps:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/heart-disease-prediction.git
+   git clone https://github.com/zerokodes/Heart_Disease_Prediction.git
    cd heart-disease-prediction
    ```
 
 2. **Prepare the Environment**
-   Ensure the dataset is placed in the `data/` folder of the project.
+   Ensure the dataset is placed in the `data/` folder of the project(Optional).
 
 3. **Build the Docker Image**
    Use the provided `Dockerfile` to build the Docker image:
@@ -73,18 +73,18 @@ To get a local copy up and running, follow these steps:
 4. **Run the Docker Container**
    Start the container to run the project:
    ```bash
-   docker run -p 5000:5000 heart-disease-prediction
+   docker run -p 9696:9696 heart-disease-prediction
    ```
 
 5. **Access the Application**
    Open your browser and navigate to:
    ```
-   http://localhost:5000
+   http://localhost:9696
    ```
 
 6. **Perform Predictions**
-   - Use the web interface to input patient data and predict the presence of heart disease.
-   - Alternatively, you can interact with the API endpoint (e.g., using Postman).
+   - input patient data in the prediction-test.py file and predict the presence of heart disease.
+   - In subsequent release, you can interact with the API endpoint (e.g., using Postman) and also the use of web interface .
 
 ---
 
